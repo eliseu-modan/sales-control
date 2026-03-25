@@ -6,10 +6,8 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "antd";
 import { Select, Space, Form, Button } from "antd";
-import ChartOne from "../charts/index.jsx";
 import ChartPizza from "../charts/chartPizza/index.jsx";
 import ChartThree from "../charts/chartLine/index.jsx";
-import ChartFour from "../charts/chartCircule/index.jsx";
 import { useService } from "../../../contexts/service";
 import { FormItem } from "../../_commons";
 import { DatePicker } from "antd";
@@ -133,8 +131,8 @@ function dashboardList() {
           style={{
             position: "relative",
             width: 120,
-            left: 1230,
-            top: -52,
+            left: 670,
+            top: -55,
           }}
         >
           <DatePicker onChange={onChange} picker="year" />
@@ -144,8 +142,8 @@ function dashboardList() {
       <Card
         style={{
           position: "absolute",
-          width: "850px",
-          height: "500px",
+          width: "750px",
+          height: "400px",
           left: "80px",
           top: "12%",
           background: "white",
@@ -160,8 +158,8 @@ function dashboardList() {
           position: "absolute",
           width: "400px",
           height: "170px",
-          left: "980px",
-          top: "65%",
+          left: "920px",
+          top: "58%",
           background: "white",
           borderColor: "BLACK",
         }}
@@ -177,9 +175,9 @@ function dashboardList() {
         style={{
           position: "absolute",
           width: "400px",
-          height: "300px",
-          left: "980px",
-          top: "12.5%",
+          height: "250px",
+          left: "920px",
+          top: "18px",
           background: "white",
           borderColor: "BLACK",
         }}

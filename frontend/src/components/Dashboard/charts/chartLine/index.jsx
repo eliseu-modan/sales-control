@@ -13,7 +13,7 @@ function ChartThree({ dataChart }) {
       data: dataChart
     }],
     chart: {
-      height: 480,
+      height: 380,
       type: 'line',
       zoom: {
         enabled: false
@@ -61,11 +61,10 @@ function ChartThree({ dataChart }) {
     const chart = new ApexCharts(chartRef.current, options);
     chart.render();
 
-    // Cleanup function to destroy the chart
     return () => {
       chart.destroy();
     };
-  }, [dataChart]); // Add dataChart as a dependency
+  }, [dataChart]);
 
   return <div id="chart" ref={chartRef}></div>;
 }

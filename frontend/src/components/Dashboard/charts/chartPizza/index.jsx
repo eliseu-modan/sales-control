@@ -4,11 +4,10 @@ import ApexCharts from 'apexcharts';
 const ChartPizza = ({ dataChart }) => {
   const chartRef = useRef(null);
 
-  // Definindo cores para os meses
   const colors = ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#775DD0', '#546E7A', '#26a69a', '#D10CE8', '#343a40', '#6c757d', '#adb5bd', '#28a745'];
 
   const options = {
-    series: dataChart, // Supondo que dataChart seja um array de números para as fatias do gráfico de pizza
+    series: dataChart,
     chart: {
       width: 340,
       height: 400,
@@ -27,12 +26,12 @@ const ChartPizza = ({ dataChart }) => {
         }
       }
     }],
-    colors: colors, // Aplicando as cores definidas
+    colors: colors,
     tooltip: {
       enabled: true,
       y: {
         formatter: function (val) {
-          return `Vendas: ${val}`; // Adiciona "Vendas: " ao valor do tooltip
+          return `Vendas: ${val}`;
         }
       }
     }
@@ -47,8 +46,7 @@ const ChartPizza = ({ dataChart }) => {
         chart.destroy();
       };
     }
-  }, [dataChart]); // Incluir options como dependência se necessário
-
+  }, [dataChart]); 
   return <div id="chart" ref={chartRef}></div>;
 }
 
